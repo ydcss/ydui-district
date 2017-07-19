@@ -1,0 +1,22 @@
+{
+  "name": "ydui-district-test",
+  "version": "1.0.3",
+  "description": "Data files of provinces and cities from JD.",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:jd": "node ./src/jd.js",
+    "build:gov": "node ./src/gov.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.oschina.net/surging/ydui-district.git"
+  },
+  "author": "ydcss.com",
+  "license": "ISC",
+  "devDependencies": {
+    "async": "^2.5.0",
+    "request": "^2.81.0"
+  }
+}
