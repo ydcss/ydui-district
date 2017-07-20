@@ -54,7 +54,6 @@ var District = require('ydui-district/dist/gov_province_city_area_id');
 <script src="//unpkg.com/ydui-district/dist/gov_province_city_area_id.js"/></script>
  => console.log(window.YDUI_DISTRICT);
 ```
-
 <br/>
 
 #### 生成最新数据文件
@@ -65,7 +64,6 @@ var District = require('ydui-district/dist/gov_province_city_area_id');
 
 3. npm run build:gov （生成国家统计局数据源文件）
 ```
-
 <br/>
 
 #### 文件内容数据格式
