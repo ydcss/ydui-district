@@ -68,7 +68,7 @@ var pickItems = function (items, withID, withArea) {
         }
     });
 
-    return '!function(){var citys=' + JSON.stringify(result) + ';if(typeof define==="function"){define(citys)}else{window.YDUI_CITYS=citys}}();';
+    return '!function(){var district=' + JSON.stringify(result) + ';if(typeof define==="function"){define(district)}else{window.YDUI_DISTRICT=district}}();';
 };
 
 fetchItems(function (error, ret) {

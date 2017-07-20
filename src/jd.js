@@ -113,7 +113,7 @@ var pickItems = function (widthID, widthArea) {
         arr.push(_province);
     });
 
-    return '!function(){var citys=' + JSON.stringify(arr) + ';if(typeof define==="function"){define(citys)}else{window.YDUI_CITYS=citys}}();';
+    return '!function(){var district=' + JSON.stringify(arr) + ';if(typeof define==="function"){define(district)}else{window.YDUI_DISTRICT=district}}();';
 };
 
 fetchCity(function () {
