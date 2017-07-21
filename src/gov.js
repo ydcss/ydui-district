@@ -6,7 +6,11 @@ var http = require('http'),
     fs = require('fs'),
     path = require('path');
 
+var pkg = require('../package.json');
+
 var link = 'http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201703/t20170310_1471429.html';
+
+var describe = '/* ' + pkg.name + ' v' + pkg.version + ' by YDCSS (c) ' + new Date().getFullYear() + ' Licensed ' + pkg.license + ' */\n';
 
 var fetchItems = function (callback) {
 
@@ -68,7 +72,7 @@ var pickItems = function (items, withID, withArea) {
         }
     });
 
-    return '!function(){var district=' + JSON.stringify(result) + ';if(typeof define==="function"){define(district)}else{window.YDUI_DISTRICT=district}}();';
+    return describe + '!function(){var district=' + JSON.stringify(result) + ';if(typeof define==="function"){define(district)}else{window.YDUI_DISTRICT=district}}();';
 };
 
 fetchItems(function (error, ret) {

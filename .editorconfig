@@ -15,6 +15,3 @@ trim_trailing_whitespace = false
 
 [*.js]
 index_size = 4
-
-[*.less]
-index_size = 2

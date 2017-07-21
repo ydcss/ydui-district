@@ -7,6 +7,9 @@ var async = require('async'),
     fs = require('fs'),
     path = require('path');
 
+var pkg = require('../package.json');
+var describe = '/* ' + pkg.name + ' v' + pkg.version + ' by YDCSS (c) ' + new Date().getFullYear() + ' Licensed ' + pkg.license + ' */\n';
+
 var provinceArr = [
         {name: '北京', id: '1'}, {name: '上海', id: '2'}, {name: '天津', id: '3'}, {name: '重庆', id: '4'},
         {name: '河北', id: '5'}, {name: '山西', id: '6'}, {name: '河南', id: '7'}, {name: '辽宁', id: '8'},
@@ -113,7 +116,7 @@ var pickItems = function (widthID, widthArea) {
         arr.push(_province);
     });
 
-    return '!function(){var district=' + JSON.stringify(arr) + ';if(typeof define==="function"){define(district)}else{window.YDUI_DISTRICT=district}}();';
+    return describe + '!function(){var district=' + JSON.stringify(arr) + ';if(typeof define==="function"){define(district)}else{window.YDUI_DISTRICT=district}}();';
 };
 
 fetchCity(function () {

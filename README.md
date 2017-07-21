@@ -111,5 +111,4 @@ if (typeof define === "function") {
 } else {
     window.YDUI_DISTRICT = district
 }
-
 ```
