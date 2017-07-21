@@ -1,16 +1,14 @@
 # ydui-district
 
-#### 中国省市县数据：省份、城市、区县，共两种数据源8个版本
-*   数据来源1（国家统计局）
-    * [中华人民共和国国家统计局-行政区划代码](http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/)
-*   数据来源2（京东）
-    * [京东触屏版](https://p.m.jd.com/norder/address.action)
+### 中国省市县数据：省份、城市、区县，共两种数据源8个版本
+*   数据来源1（国家统计局） - [中华人民共和国国家统计局-行政区划代码](http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/)
+*   数据来源2（京东） - [京东触屏版](https://p.m.jd.com/norder/address.action)
 
-#### 数据源各自优点
+### 数据源各自优点
 *   京东数据源更灵活，更贴切实际，更详细，当然文件也相对大一点，ID为京东自己的算法；（例：北京 => 1, 上海 => 2）
 *   国家统计局数据，ID为区域代码，方便与其他数据源对应；（例：北京市 => 110000）
 
-#### 文件列表（京东触屏数据源）
+### 文件列表（京东触屏数据源）
 |文件名称|文件描述|文件大小|
 |:------|:------|:-----|
 | jd_province_city.js | 包含“省份”“市级”数据 | 10 KB |
@@ -18,7 +16,7 @@
 | jd_province_city_area.js | 包含“省份”“市级”“县级”数据 | 94 KB |
 | jd_province_city_area_id.js | 包含“省份”“市级”“县级”数据（含ID） | 149 KB |
 
-#### 文件列表（国家统计局数据源）
+### 文件列表（国家统计局数据源）
 |文件名称|文件描述|文件大小|
 |:------|:------|:-----|
 | gov_province_city.js | 包含“省份”“市级”数据 | 11 KB |
@@ -26,26 +24,26 @@
 | gov_province_city_area.js | 包含“省份”“市级”“县级”数据 | 68 KB |
 | gov_province_city_area_id.js | 包含“省份”“市级”“县级”数据（含ID） | 112 KB |
 
-#### 安装
-```shell
+### 安装
+```html
 $ npm install ydui-district --save
+
+或: 
+
+<script src="//unpkg.com/ydui-district/dist/gov_province_city_area_id.js"/></script>
+console.log(window.YDUI_DISTRICT);
 ```
 
-#### 使用
+### 使用
 ```html
 import District from 'ydui-district/dist/gov_province_city_area_id';
 
 或: 
 
 var District = require('ydui-district/dist/gov_province_city_area_id');
-
-或: 
-
-<script src="//unpkg.com/ydui-district/dist/gov_province_city_area_id.js"/></script>
- => console.log(window.YDUI_DISTRICT);
 ```
 
-#### 生成最新数据文件
+### 生成最新数据文件
 ```shell
 1. npm install
 
@@ -54,7 +52,7 @@ var District = require('ydui-district/dist/gov_province_city_area_id');
 3. npm run build:gov （生成国家统计局数据源文件）
 ```
 
-#### 文件内容数据格式
+### 文件内容数据格式
 *   键值说明：v => value, n => name, c => children 
 *   不含ID文件：即不包含【"v": "1"】 
 
@@ -107,6 +105,7 @@ var district = [
     },
     .....
 ];
+
 if (typeof define === "function") {
     define(district)
 } else {
