@@ -30,7 +30,7 @@ $ npm install ydui-district --save
 
 或: 
 
-<script src="//unpkg.com/ydui-district/dist/gov_province_city_area_id.js"/></script>
+<script src="//unpkg.com/ydui-district/dist/gov_province_city_area_id.js"></script>
 console.log(window.YDUI_DISTRICT);
 ```
 
