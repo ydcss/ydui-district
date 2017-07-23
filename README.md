@@ -11,18 +11,18 @@
 ### 文件列表（京东触屏数据源）
 |文件名称|文件描述|文件大小|
 |:------|:------|:-----|
-| jd_province_city.js | 包含“省份”“市级”数据 | 10 KB |
-| jd_province_city_id.js | 包含“省份”“市级”数据（含ID） | 15 KB |
-| jd_province_city_area.js | 包含“省份”“市级”“县级”数据 | 94 KB |
-| jd_province_city_area_id.js | 包含“省份”“市级”“县级”数据（含ID） | 149 KB |
+| dist/jd_province_city.js | 包含“省份”“市级”数据 | 10 KB |
+| dist/jd_province_city_id.js | 包含“省份”“市级”数据（含ID） | 15 KB |
+| dist/jd_province_city_area.js | 包含“省份”“市级”“县级”数据 | 94 KB |
+| dist/jd_province_city_area_id.js | 包含“省份”“市级”“县级”数据（含ID） | 149 KB |
 
 ### 文件列表（国家统计局数据源）
 |文件名称|文件描述|文件大小|
 |:------|:------|:-----|
-| gov_province_city.js | 包含“省份”“市级”数据 | 11 KB |
-| gov_province_city_id.js | 包含“省份”“市级”数据（含ID） | 15 KB |
-| gov_province_city_area.js | 包含“省份”“市级”“县级”数据 | 68 KB |
-| gov_province_city_area_id.js | 包含“省份”“市级”“县级”数据（含ID） | 112 KB |
+| dist/gov_province_city.js | 包含“省份”“市级”数据 | 11 KB |
+| dist/gov_province_city_id.js | 包含“省份”“市级”数据（含ID） | 15 KB |
+| dist/gov_province_city_area.js | 包含“省份”“市级”“县级”数据 | 68 KB |
+| dist/gov_province_city_area_id.js | 包含“省份”“市级”“县级”数据（含ID） | 112 KB |
 
 ### 安装
 ```html
