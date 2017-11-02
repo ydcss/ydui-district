@@ -66,8 +66,8 @@ var pickItems = function (items, withID, withArea) {
             ++areaIndex;
             if(withArea) {
                 // 中山市、东莞市、三沙市、儋州市，在国家统计局表里没有下级数据，手动添加
-                if (obj.v === '442000' || obj.v === '441900' || obj.v === '460300' || obj.v === '460400') {
-                    obj.c = missingData[obj.v].c;
+                if (obj.n === '中山市' || obj.n === '东莞市' || obj.n === '三沙市' || obj.n === '儋州市') {
+                    obj.c = missingData[obj.n].c;
                 }
             }
         } else {
