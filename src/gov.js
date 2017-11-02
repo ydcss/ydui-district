@@ -12,6 +12,8 @@ var link = 'http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201703/t20170310_1471429.ht
 
 var describe = '/* ' + pkg.name + ' v' + pkg.version + ' by YDCSS (c) ' + new Date().getFullYear() + ' Licensed ' + pkg.license + ' */\n';
 
+var missingData = require('./missing.json');
+
 var fetchItems = function (callback) {
 
     console.log('gov: 数据抓取中...');
@@ -62,6 +64,12 @@ var pickItems = function (items, withID, withArea) {
         } else if (/(&nbsp;){6}/g.test(item)) {
             result[provinceIndex - 1].c.push(obj);
             ++areaIndex;
+            if(withArea) {
+                // 中山市、东莞市、三沙市、儋州市，在国家统计局表里没有下级数据，手动添加
+                if (obj.v === '442000' || obj.v === '441900' || obj.v === '460300' || obj.v === '460400') {
+                    obj.c = missingData[obj.v].c;
+                }
+            }
         } else {
             if (withArea) {
                 var j = {};
